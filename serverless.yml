@@ -1,0 +1,22 @@
+service: sample-project
+
+provider:
+  name: aws
+  runtime: python3.10
+  memorySize: 1024
+  region: ap-northeast-1
+  architecture: x86_64
+  ecr:
+    images:
+      image_sample_project:
+        platform: linux/amd64
+        path: ./
+
+functions:
+  sample-project:
+    name: sample-project
+    timeout: 900
+    image:
+      name: image_sample_project
+#   environment:
+#     ENV_NAME: ENV_VALUE

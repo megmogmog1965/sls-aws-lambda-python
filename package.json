@@ -1,0 +1,10 @@
+{
+  "name": "sample-project",
+  "dependencies": {
+    "serverless": "^3.31.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "npx sls deploy"
+  }
+}
